@@ -17,8 +17,25 @@
 # Strava Club Mileage
 
 ### An easy way to get the total distance all the members of a Strava club have done.
+![enter image description here](https://i.ibb.co/nQdP5yH/demo.png)
+### How to:
+- Make sure Python works on your machine.
+- Get the club code (not the name) from the URL: ![club code](https://i.ibb.co/KqVbw5M/image.png)
 
-Usage:
-1. Clone the repository.
-2. Edit the [Club ID](https://ibb.co/f2HtHFS) and [Access Token](https://developers.strava.com/docs/getting-started/#account) in the script.
-3. Run the script
+Keep in mind that to be able to get information from clubs, the Strava account you get the API key from needs to be in said clubs. I've found Strava limits the amount of clubs you can join in 24h to 5 currently.
+- Edit the `codedb.json` file according to your needs. Make sure to set the data both on the first part of the file and on the second one as per the example file provided.
+
+![codedb explanation](https://i.ibb.co/Yy0sLnT/codedb.png)
+
+- Install the dependencies with `pip install -r requirements.txt`
+- You need to already have a [Discord application](https://discord.com/developers/applications) and its API key, use [this](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/) tutorial if you don't.
+- Set the API keys by editing `discordbot.py` if running locally.
+- If using Heroku set the following variables: ![heroku vars](https://i.ibb.co/bQ76zSM/heroku-configs.png)
+
+### Usage:
+|Command| Function | Scope |
+|--|--|--|
+| `!strava <club>`| Get the data from the specified club | Can be used by anyone |
+|`!list`|List all the clubs located in the database| Can only be used a server administrator*|
+
+*This is done to prevent hitting the API request limit by people spamming the command.
