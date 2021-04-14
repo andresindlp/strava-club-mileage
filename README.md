@@ -39,3 +39,9 @@ Keep in mind that to be able to get information from clubs, the Strava account y
 |`!list`|List all the clubs located in the database| Can only be used a server administrator*|
 
 *This is done to prevent hitting the API request limit by people spamming the command.
+
+
+
+
+
+This project is licensed under the terms of the MIT license.
